@@ -1,0 +1,89 @@
+@import "variables";
+
+@mixin tagline($color) {
+  margin-bottom: 17px;
+  position: relative;
+  padding-left: 55px;
+  &:before {
+    content: '';
+    width: 43px;
+    position: absolute;
+    border: 1px solid $color;
+    left: 0;
+    bottom: 12px;
+  }
+}
+
+@mixin btn($py, $px, $color, $bg-color, $border-color, $h-color, $h-bg-color, $h-border-color) {
+  padding: $py $px;
+  border: 1px solid $border-color;
+  background: $bg-color;
+  text-transform: uppercase;
+  color: $color;
+  font-weight: 600;
+  transition: all .4s ease;
+  z-index: 100;
+  &:hover {
+    color: $h-color;
+    background: $h-bg-color;
+    border-color: $h-border-color;
+    cursor: pointer;
+  }
+}
+
+@mixin link($color, $h-color, $f-size) {
+  color: $color;
+  font-size: $f-size;
+  text-decoration: none;
+  transition: all .4s ease;
+  &:hover {
+    color: $h-color;
+  }
+}
+
+@mixin slider-pagination($top, $right, $bottom, $left) {
+  width: 300px;
+  height: 50px;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin slider-pagination-view-el() {
+  border-radius: 0;
+  border-bottom: 2px solid #7B7B7B;
+  width: 50px;
+  height: 32px;
+  font-weight: 600;
+  background: transparent;
+  text-align: end;
+  color: #7B7B7B;
+  opacity: 1;
+}
+
+@mixin slider-buttons($top, $bottom) {
+  top: $top;
+  bottom: $bottom;
+  width: 104px;
+  height: 104px;
+  background: $secondary-color;
+  color: white;
+  transition: all .4s ease;
+
+  &:hover {
+    background: white;
+
+    svg {
+      path {
+        fill: $secondary-color;
+      }
+    }
+  }
+}
+
+@mixin title($f-size, $f-weight, $l-height) {
+  font-size: $f-size;
+  font-weight: $f-weight;
+  line-height: $l-height;
+}
