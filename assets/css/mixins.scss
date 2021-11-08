@@ -31,6 +31,27 @@
   }
 }
 
+@mixin btn-link($width, $py) {
+  display: block;
+  width: $width;
+  padding: $py 0;
+  margin: auto;
+  border: 1px solid $secondary-color;
+  background: $secondary-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  transition: all .4s ease;
+  z-index: 100;
+  &:hover {
+    color: $primary-color;
+    background: white;
+    border-color: $secondary-color;
+  }
+}
+
 @mixin link($color, $h-color, $f-size) {
   color: $color;
   font-size: $f-size;

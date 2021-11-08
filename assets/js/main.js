@@ -69,16 +69,28 @@ window.addEventListener('load', function () {
         })
     }
 
+    if (document.querySelector('.inputfile')) {
+        const inputFile = document.querySelector('.inputfile input');
+
+        let inputTitle = document.querySelector('.inputfile .title')
+
+        inputFile.addEventListener('change', function () {
+            if (this.files && this.files.length > 0) {
+                inputTitle.innerHTML = this.files[0].name
+            }
+        })
+    }
+
 })
 
-const businessSwiper = new Swiper('.cooperation-slider', {
+const partnerSwiper = new Swiper('.partner-slider', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
 
     // If we need pagination
     pagination: {
-        el: '.cooperation-slider .custom-pagination',
+        el: '.partner-slider .custom-pagination',
         renderBullet: function (index, className) {
             return '<span class="' + className + '">' + '0' + (index + 1) + '</span>';
         }
@@ -86,8 +98,8 @@ const businessSwiper = new Swiper('.cooperation-slider', {
 
     // Navigation arrows
     navigation: {
-        nextEl: '.cooperation-slider .swiper-button-next',
-        prevEl: '.cooperation-slider .swiper-button-prev',
+        nextEl: '.partner-slider .swiper-button-next',
+        prevEl: '.partner-slider .swiper-button-prev',
     },
 
     // And if we need scrollbar
