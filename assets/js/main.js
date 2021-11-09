@@ -28,23 +28,27 @@ window.addEventListener('load', function () {
         });
     }
 
+    function showTab(elem) {
+        const tabsLink = document.querySelectorAll(`.tabs__link[data-name=${elem.dataset.name}]`);
+        const tabsPane = document.querySelectorAll(`.tabs__pane[data-name=${elem.dataset.name}]`);
+
+        const id = elem.getAttribute('href').replace('#', '');
+
+        tabsLink.forEach(elem => elem.classList.remove('tabs__link__active'));
+        tabsPane.forEach(elem => elem.classList.remove('tabs__pane_show'));
+
+        elem.classList.add('tabs__link__active')
+        document.getElementById(id).classList.add('tabs__pane_show')
+    }
+
     if (document.querySelectorAll('.tabs__link')) {
-        const tabLinks = document.querySelectorAll('.tabs__link');
-        const tabPanes = document.querySelectorAll('.tabs__pane');
+        const tabsLink = document.querySelectorAll('.tabs__link');
 
-        tabLinks.forEach(item => {
-            item.addEventListener('click', function (e) {
-                e.preventDefault()
+        tabsLink.forEach(item => item.addEventListener('click', (e) => {
+            e.preventDefault();
+            showTab(item);
+        }))
 
-                const id = e.currentTarget.getAttribute('href').replace('#', '')
-
-                tabLinks.forEach(item => item.classList.remove('tabs__link__active'))
-                tabPanes.forEach(item => item.classList.remove('tabs__pane_show'))
-
-                item.classList.add('tabs__link__active');
-                document.getElementById(id).classList.add('tabs__pane_show')
-            })
-        })
     }
 
     if (document.querySelector('.faq__list')) {

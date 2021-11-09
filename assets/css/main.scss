@@ -44,18 +44,18 @@ p {
 
 
 .start-page {
-  background: linear-gradient(0deg, rgba(45, 182, 253, 1) 0%, rgba(240, 240, 240, 1) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(240, 240, 240, 1) 100%);
   min-height: 100vh;
 
   .top-plate {
-    background: rgba(255, 255, 255, .2);
+    background: rgba(162, 185, 164, 0.3);
 
     .top-plate__logo {
       display: flex;
       justify-content: center;
 
       img {
-        width: 292px;
+        width: 252px;
         height: 95px;
       }
     }
@@ -100,7 +100,7 @@ p {
           &:hover {
             p {
               backdrop-filter: brightness(100%);
-              color: #d0bc1c;
+              color: $secondary-color;
             }
           }
 
@@ -163,6 +163,9 @@ p {
 
           a {
             @include link(white, $secondary-color, 14px);
+            display: flex;
+            align-items: center;
+            height: 100%;
           }
         }
       }
@@ -1306,8 +1309,8 @@ p {
       }
 
       .head__tags {
-
         .tag__item {
+          text-decoration: none;
           color: #FFFFFF;
           background: rgba(255, 255, 255, 0.15);
           font-size: 12px;
@@ -1651,34 +1654,13 @@ p {
             display: none;
 
             .pane__body {
-              .transactions__list {
-                display: flex;
-                flex-wrap: wrap;
+              -webkit-columns: 2;
+              -moz-columns: 2;
+              columns: 2;
 
-                li {
-                  flex: 50%;
-
-                  ul {
-                    list-style: disc;
-                    max-width: 570px;
-
-                    .list__item {
-                      color: #6B7681;
-                      margin-bottom: 37px;
-
-                      ul {
-                        list-style: none;
-
-                        li {
-                          margin: 8px 0;
-
-                          &:before {
-                            content: '-';
-                          }
-                        }
-                      }
-                    }
-                  }
+              .body__column {
+                .body__item {
+                  padding: 8px 0;
                 }
               }
             }
@@ -2047,6 +2029,7 @@ p {
       }
     }
   }
+
   .bg-gray {
     background: linear-gradient(180deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 100%);
   }
@@ -2169,6 +2152,7 @@ p {
 .blog {
   .blog__wrapper {
     margin: 65px 0 130px;
+
     .blog__header {
       .blog__categories {
         display: flex;
@@ -2322,6 +2306,7 @@ p {
             flex-wrap: wrap;
 
             .tag__item {
+              text-decoration: none;
               color: #6B7681;
               background: #F8F8F8;
               font-size: 12px;
