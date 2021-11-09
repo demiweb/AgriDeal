@@ -10,6 +10,10 @@ body {
   color: #343645;
 }
 
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
 h1 {
   font-size: 40px;
   line-height: 52px;
@@ -378,12 +382,20 @@ p {
 .services .services__wrapper .services__body .services__card .card__list .list__item .item__wrapper {
   padding: 36px 0;
   font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 .services .services__wrapper .services__body .services__card .card__list .list__item .item__wrapper .item__num {
   display: inline-block;
   font-weight: 600;
   width: 50px;
   color: #6B7681;
+}
+.services .services__wrapper .services__body .services__card .card__list .list__item .item__wrapper svg {
+  margin-left: auto;
+}
+.services .services__wrapper .services__body .services__card .card__list .list__item .item__wrapper svg path {
+  stroke: white;
 }
 .services .services__wrapper .services__body .services__card.card__customer {
   background: #343645;
@@ -430,6 +442,10 @@ p {
 .services .services__wrapper .services__body .services__card.card__salesman .card__list .list__item:hover .item__wrapper .item__num {
   color: #343645;
 }
+.services .services__wrapper .services__body .services__card.card__salesman .card__list .list__item:hover .item__wrapper svg path {
+  fill: #6B7681;
+  stroke: #6B7681;
+}
 .services .services__wrapper .services__body .services__card.card__salesman .card__list .list__item .item__wrapper {
   border-bottom: 1px solid #95DDA3;
 }
@@ -451,6 +467,7 @@ p {
   max-width: 600px;
 }
 .result .result__wrapper .result__body .result__header .result__column .column__wrapper .result__pre-title {
+  font-size: 16px;
   color: #374049;
 }
 .result .result__wrapper .result__body .result__header .result__column .column__wrapper .tagline {
@@ -526,6 +543,7 @@ p {
   position: relative;
 }
 .cooperation .cooperation__wrapper .cooperation__body .content__column .cooperation__pre-title {
+  font-size: 16px;
   color: white;
 }
 .cooperation .cooperation__wrapper .cooperation__body .content__column .tagline {
@@ -620,6 +638,7 @@ p {
   flex: 1;
 }
 .about-us .about-us__wrapper .about-us__body .column__description .description__pre-title {
+  font-size: 16px;
   color: #343645;
 }
 .about-us .about-us__wrapper .about-us__body .column__description .tagline {
@@ -698,6 +717,7 @@ p {
   width: 590px;
   height: 670px;
   margin: 0 43px 48px 0;
+  z-index: 2;
 }
 .about-us .about-us__wrapper .about-us__body .column__img .green-block {
   position: absolute;
@@ -706,6 +726,7 @@ p {
   width: 240px;
   height: 217px;
   background: #22C341;
+  z-index: 3;
 }
 .about-us .about-us__wrapper .about-us__body .column__img .grey-block {
   position: absolute;
@@ -714,7 +735,7 @@ p {
   width: 240px;
   height: 357px;
   background: #F4F4F4;
-  z-index: -1;
+  z-index: 1;
 }
 
 .actual .actual__wrapper {
@@ -728,6 +749,7 @@ p {
   flex: 1;
 }
 .actual .actual__wrapper .actual__body .actual__header .text__column .actual__pre-title {
+  font-size: 16px;
   color: #374049;
 }
 .actual .actual__wrapper .actual__body .actual__header .text__column .tagline {
@@ -874,6 +896,7 @@ p {
   background: linear-gradient(180deg, #F7F7F7 0%, rgba(255, 255, 255, 0) 100%);
 }
 .cases .cases__header .cases__pre-title {
+  font-size: 16px;
   color: #343645;
 }
 .cases .cases__header .tagline {
@@ -1310,6 +1333,7 @@ p {
   margin-bottom: 120px;
 }
 .deals .deals__wrapper .deals__body .deals__header .deals__pre-title {
+  font-size: 16px;
   color: #343645;
 }
 .deals .deals__wrapper .deals__body .deals__header .tagline {
@@ -1478,6 +1502,7 @@ p {
   background: linear-gradient(180deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 100%);
 }
 .transactions .transactions__wrapper .transactions__body .transactions__pre-title p {
+  font-size: 16px;
   color: #374049;
 }
 .transactions .transactions__wrapper .transactions__body .tagline {
@@ -1561,9 +1586,6 @@ p {
 .reputation .reputation__wrapper .reputation__body .reputation__column {
   flex: 1;
 }
-.reputation .reputation__wrapper .reputation__body .reputation__column .column__pre-title {
-  margin-bottom: 17px;
-}
 .reputation .reputation__wrapper .reputation__body .reputation__column .column__pre-title p {
   color: white;
   font-size: 16px;
@@ -1644,9 +1666,6 @@ p {
 }
 .faq .faq__wrapper .faq__body .faq__column {
   flex: 1;
-}
-.faq .faq__wrapper .faq__body .faq__column .faq__pre-title {
-  margin-bottom: 17px;
 }
 .faq .faq__wrapper .faq__body .faq__column .faq__pre-title p {
   font-size: 16px;
@@ -1776,6 +1795,7 @@ p {
   position: relative;
 }
 .about .about__wrapper .about__body .about__column .column__wrapper .column__pre-title {
+  font-size: 16px;
   color: #343645;
 }
 .about .about__wrapper .about__body .about__column .column__wrapper .tagline {
@@ -1834,6 +1854,7 @@ p {
   width: 490px;
   height: 555px;
   margin: 0 43px 48px 0;
+  z-index: 2;
 }
 .about .about__wrapper .about__body .about__column .column__wrapper .green-block {
   position: absolute;
@@ -1842,6 +1863,7 @@ p {
   width: 198px;
   height: 179px;
   background: #22C341;
+  z-index: 3;
 }
 .about .about__wrapper .about__body .about__column .column__wrapper .grey-block {
   position: absolute;
@@ -1849,8 +1871,8 @@ p {
   top: 44px;
   width: 198px;
   height: 295px;
-  background: black;
-  z-index: -1;
+  background: #F4F4F4;
+  z-index: 1;
 }
 .about .about__wrapper .about__body .about__column.about__column-order {
   order: 1;
@@ -1887,6 +1909,7 @@ p {
   flex: 1;
 }
 .deals-result .deals-result__wrapper .deals-result__body .deals-result__column .column__pre-title {
+  font-size: 16px;
   color: #343645;
 }
 .deals-result .deals-result__wrapper .deals-result__body .deals-result__column .tagline {
@@ -2137,6 +2160,8 @@ p {
 .articles .articles__wrapper .articles__body .body__block .block__article .article__body article figure img {
   width: 957px;
   height: 505px;
+  z-index: 2;
+  position: relative;
 }
 .articles .articles__wrapper .articles__body .body__block .block__article .article__body article figure figcaption {
   margin-top: 8px;
@@ -2150,6 +2175,7 @@ p {
   width: 181px;
   height: 163px;
   background: #22C341;
+  z-index: 3;
 }
 .articles .articles__wrapper .articles__body .body__block .block__article .article__body article figure .grey-block {
   position: absolute;
@@ -2158,7 +2184,7 @@ p {
   width: 181px;
   height: 269px;
   background: #F4F4F4;
-  z-index: -1;
+  z-index: 1;
 }
 .articles .articles__wrapper .articles__body .body__block .block__article .article__body article ol {
   padding-left: 14px;
@@ -2345,6 +2371,7 @@ p {
   flex-wrap: wrap;
 }
 .articles .articles__wrapper .articles__body .body__side-bar .side-bar__tags .tags__body .tag__item {
+  text-decoration: none;
   color: #6B7681;
   background: #F8F8F8;
   font-size: 12px;

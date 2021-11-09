@@ -12,6 +12,10 @@ body {
   color: $primary-color;
 }
 
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+
 h1 {
   font-size: 40px;
   line-height: 52px;
@@ -400,6 +404,8 @@ p {
             .item__wrapper {
               padding: 36px 0;
               font-weight: 700;
+              display: flex;
+              align-items: center;
 
               .item__num {
                 display: inline-block;
@@ -407,8 +413,14 @@ p {
                 width: 50px;
                 color: #6B7681;
               }
-            }
 
+              svg {
+                margin-left: auto;
+                path {
+                  stroke: white;
+                }
+              }
+            }
           }
         }
       }
@@ -470,6 +482,12 @@ p {
                 .item__num {
                   color: $primary-color;
                 }
+                svg {
+                  path {
+                    fill: #6B7681;
+                    stroke: #6B7681;
+                  }
+                }
               }
             }
 
@@ -506,6 +524,7 @@ p {
             max-width: 600px;
 
             .result__pre-title {
+              font-size: 16px;
               color: #374049;
             }
 
@@ -596,6 +615,7 @@ p {
         position: relative;
 
         .cooperation__pre-title {
+          font-size: 16px;
           color: white;
         }
 
@@ -690,6 +710,7 @@ p {
         flex: 1;
 
         .description__pre-title {
+          font-size: 16px;
           color: $primary-color;
         }
 
@@ -756,6 +777,7 @@ p {
           width: 590px;
           height: 670px;
           margin: 0 43px 48px 0;
+          z-index: 2;
         }
 
         .green-block {
@@ -765,6 +787,7 @@ p {
           width: 240px;
           height: 217px;
           background: #22C341;
+          z-index: 3;
         }
 
         .grey-block {
@@ -774,7 +797,7 @@ p {
           width: 240px;
           height: 357px;
           background: #F4F4F4;
-          z-index: -1;
+          z-index: 1;
         }
       }
     }
@@ -795,6 +818,7 @@ p {
           flex: 1;
 
           .actual__pre-title {
+            font-size: 16px;
             color: #374049;
           }
 
@@ -961,6 +985,7 @@ p {
   .cases__header {
 
     .cases__pre-title {
+      font-size: 16px;
       color: $primary-color;
     }
 
@@ -1438,6 +1463,7 @@ p {
       .deals__header {
 
         .deals__pre-title {
+          font-size: 16px;
           color: $primary-color;
         }
 
@@ -1585,6 +1611,7 @@ p {
     .transactions__body {
       .transactions__pre-title {
         p {
+          font-size: 16px;
           color: #374049;
         }
       }
@@ -1689,8 +1716,6 @@ p {
         flex: 1;
 
         .column__pre-title {
-          margin-bottom: 17px;
-
           p {
             color: white;
             font-size: 16px;
@@ -1789,8 +1814,6 @@ p {
         flex: 1;
 
         .faq__pre-title {
-          margin-bottom: 17px;
-
           p {
             font-size: 16px;
             color: $primary-color;
@@ -1936,6 +1959,7 @@ p {
           position: relative;
 
           .column__pre-title {
+            font-size: 16px;
             color: $primary-color;
           }
 
@@ -1979,6 +2003,7 @@ p {
             width: 490px;
             height: 555px;
             margin: 0 43px 48px 0;
+            z-index: 2;
           }
 
           .green-block {
@@ -1988,6 +2013,7 @@ p {
             width: 198px;
             height: 179px;
             background: #22C341;
+            z-index: 3;
           }
 
           .grey-block {
@@ -1996,8 +2022,8 @@ p {
             top: 44px;
             width: 198px;
             height: 295px;
-            background: black;
-            z-index: -1;
+            background: #F4F4F4;
+            z-index: 1;
           }
         }
 
@@ -2047,6 +2073,7 @@ p {
         flex: 1;
 
         .column__pre-title {
+          font-size: 16px;
           color: #343645;
         }
 
@@ -2312,7 +2339,7 @@ p {
               font-size: 12px;
               padding: 4px 13px;
               margin: 0 7px 7px 0;
-            }
+          }
           }
         }
       }
@@ -2378,7 +2405,8 @@ p {
                 img {
                   width: 957px;
                   height: 505px;
-
+                  z-index: 2;
+                  position: relative;
                 }
 
                 figcaption {
@@ -2395,6 +2423,7 @@ p {
                   width: 181px;
                   height: 163px;
                   background: #22C341;
+                  z-index: 3;
                 }
 
                 .grey-block {
@@ -2404,7 +2433,7 @@ p {
                   width: 181px;
                   height: 269px;
                   background: #F4F4F4;
-                  z-index: -1;
+                  z-index: 1;
                 }
               }
 
@@ -2654,6 +2683,7 @@ p {
             flex-wrap: wrap;
 
             .tag__item {
+              text-decoration: none;
               color: #6B7681;
               background: #F8F8F8;
               font-size: 12px;
