@@ -2,20 +2,21 @@ window.addEventListener('load', function () {
     const languageItems = document.querySelectorAll('.dropdown-language li');
     const selectedLanguage = document.querySelector('#selected-value')
     const languageList = document.querySelector('#language-list')
+    const dropdownLanguage = document.querySelector('.dropdown-language');
+
+    dropdownLanguage.addEventListener('click', function (e) {
+        this.classList.toggle('active');
+    })
 
     languageItems.forEach(elem => {
-        elem.addEventListener('click', function () {
-            languageList.classList.remove('active');
-            selectedLanguage.innerHTML = elem.innerHTML
-        })
+            elem.addEventListener('click', function () {
+                languageList.classList.remove('active');
+                selectedLanguage.innerHTML = elem.innerHTML
+            })
 
         if (elem.dataset.selected === 'selected') {
             selectedLanguage.innerHTML = elem.innerHTML
         }
-    })
-
-    selectedLanguage.addEventListener('click', function (elem) {
-        languageList.classList.toggle('active');
     })
 
     if (document.querySelector('.seo__wrapper')) {
@@ -84,6 +85,28 @@ window.addEventListener('load', function () {
             }
         })
     }
+
+    const burger = document.querySelector('.header__burger');
+    const headerBackground = document.querySelector('.header__background');
+
+    burger.addEventListener('click', toggleBurger);
+    headerBackground.addEventListener('click', function (e) {
+        e.stopPropagation();
+        headerBackground.classList.remove('header__background--show');
+        burger.classList.remove('header__burger--show');
+    })
+
+    function toggleBurger() {
+        burger.classList.toggle('header__burger--show');
+        if (burger.classList.contains('header__burger--show')) {
+            headerBackground.classList.add('header__background--show');
+            document.querySelector('body').style.overflow = 'hidden';
+        } else {
+            headerBackground.classList.remove('header__background--show');
+            document.querySelector('body').style.overflow = 'auto';
+        }
+    }
+
 
 })
 

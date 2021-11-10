@@ -103,8 +103,9 @@
   }
 }
 
-@mixin title($f-size, $f-weight, $l-height) {
-  font-size: $f-size;
-  font-weight: $f-weight;
-  line-height: $l-height;
+@mixin title($title-s, $title-l-h, $padding-b: 0, $font-w: 700) {
+  font-size: $title-s;
+  font-weight: $font-w;
+  line-height: $title-l-h;
+  padding-bottom: $padding-b;
 }
