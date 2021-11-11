@@ -1,3 +1,44 @@
+window.onscroll = function () {
+    scrollFunction();
+
+};
+function checkScrollDir() {
+    newValue = window.pageYOffset;
+    // console.log(window.pageYOffset + ' pageoffset')
+    if (oldValue > newValue) {
+        // console.log('scroll top?')
+        document.querySelector('.header').classList.add('sticked');
+        if (window.pageYOffset <= 30) {
+            document.querySelector('.header').classList.remove('sticked');
+
+        } else {
+
+        }
+    } else if (window.pageYOffset <= 30) {
+        document.querySelector('.header').classList.remove('sticked');
+    } else {
+        document.querySelector('.header').classList.add('sticked');
+
+    }
+
+
+    oldValue = newValue;
+}
+
+let oldValue = 0;
+let newValue = 0;
+
+function scrollFunction() {
+    checkScrollDir();
+
+
+}
+
+document.onload = () => {
+    scrollFunction();
+};
+
+
 window.addEventListener('load', function () {
     const languageItems = document.querySelectorAll('.dropdown-language li');
     const selectedLanguage = document.querySelector('#selected-value')
@@ -9,10 +50,10 @@ window.addEventListener('load', function () {
     })
 
     languageItems.forEach(elem => {
-            elem.addEventListener('click', function () {
-                languageList.classList.remove('active');
-                selectedLanguage.innerHTML = elem.innerHTML
-            })
+        elem.addEventListener('click', function () {
+            languageList.classList.remove('active');
+            selectedLanguage.innerHTML = elem.innerHTML
+        })
 
         if (elem.dataset.selected === 'selected') {
             selectedLanguage.innerHTML = elem.innerHTML
