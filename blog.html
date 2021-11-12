@@ -162,9 +162,7 @@
                         </li>
                     </ul>
                     <div class="header__logo">
-                        <a href="home.html">
-                            <img src="assets/image/logo.png" alt="logo"/>
-                        </a>
+                        <img src="assets/image/logo.png" alt="logo"/>
                     </div>
                     <ul>
                         <li>
@@ -191,32 +189,36 @@
                             </div>
                             <ul id="language-list">
                                 <li data-selected='selected'>
-                                    RU
+                                    <span>RU</span>
                                 </li>
                                 <li data-selected="no-selected">
-                                    EN
+                                    <a href="#">EN</a>
                                 </li>
                                 <li data-selected="no-selected">
-                                    FR
+                                    <a href="#">FR</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <div class="header__phone">
-                    <a href="tel:+38 (097) 221-22-22">+38 (097) 221-22-22</a>
-                    <a href="tel:+38 (063) 221-22-22">+38 (063) 221-22-22</a>
-                </div>
+
             </div>
         </div>
     </div>
 </header>
 
 <main>
-    <!--  Head  -->
-    <section class="head">
-        <div class="head__wrapper head__wrapper--blog">
-            <div class="container">
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="./assets/image/head/blog.png" alt="">
+        </div>
+        <div class="container">
+            <div class="hero__container">
+                <div class="hero-number">
+                    <a href="tel:+38 (097) 221-22-22">+38 (097) 221-22-22</a>
+                    <a href="tel:+38 (063) 221-22-22">+38 (063) 221-22-22</a>
+
+                </div>
                 <div class="head__body">
                     <div class="head__path">
                         <ol itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -240,6 +242,7 @@
             </div>
         </div>
     </section>
+    <!--  Head  -->
 
     <!--  Blog  -->
     <section class="blog">
@@ -248,33 +251,40 @@
                 <header class="blog__header">
                     <div class="blog__categories">
                         <a class="categories__link tabs__link tabs__link__active" href="#blog-1" data-name="blog">
-                            <img src="assets/image/blog/categories/img-1.png" alt="categories">
+                            <div class="img">
+                                <img src="assets/image/blog/categories/img-1.png" alt="categories">
+                            </div>
                             <p>Все</p>
                         </a>
                         <a class="categories__link tabs__link" href="#blog-2" data-name="blog">
-                            <img src="assets/image/blog/categories/img-2.png" alt="categories">
-                            <p>Новости</p>
+                            <div class="img">
+                                <img src="assets/image/blog/categories/img-1.png" alt="categories">
+                            </div>                            <p>Новости</p>
                         </a>
                         <a class="categories__link tabs__link" href="#blog-3" data-name="blog">
-                            <img src="assets/image/blog/categories/img-3.png" alt="categories">
-                            <p>Исследования</p>
+                            <div class="img">
+                                <img src="assets/image/blog/categories/img-1.png" alt="categories">
+                            </div>                            <p>Исследования</p>
                         </a>
                         <a class="categories__link tabs__link" href="#blog-4" data-name="blog">
-                            <img src="assets/image/blog/categories/img-4.png" alt="categories">
-                            <p>Интервью</p>
+                            <div class="img">
+                                <img src="assets/image/blog/categories/img-1.png" alt="categories">
+                            </div>                            <p>Интервью</p>
                         </a>
                         <a class="categories__link tabs__link" href="#blog-5" data-name="blog">
-                            <img src="assets/image/blog/categories/img-5.png" alt="categories">
-                            <p>Блог партнеров</p>
+                            <div class="img">
+                                <img src="assets/image/blog/categories/img-1.png" alt="categories">
+                            </div>                            <p>Блог партнеров</p>
                         </a>
                         <a class="categories__link tabs__link" href="#blog-6" data-name="blog">
-                            <img src="assets/image/blog/categories/img-6.png" alt="categories">
-                            <p>Кейсы</p>
+                            <div class="img">
+                                <img src="assets/image/blog/categories/img-1.png" alt="categories">
+                            </div>                            <p>Кейсы</p>
                         </a>
                     </div>
                 </header>
                 <div class="blog__hero">
-                    <main class="body__main">
+                    <div class="body__main">
                         <div class="blog__block tabs__pane tabs__pane_show" id="blog-1" data-name="blog">
                             <a href="article.html">
                                 <div class="blog__body">
@@ -2345,7 +2355,7 @@
                                 </div>
                             </a>
                         </div>
-                    </main>
+                    </div>
                     <aside class="body__side-bar">
                         <div class="side-bar__category">
                             <div class="category__title">
