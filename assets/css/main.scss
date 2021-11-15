@@ -6,6 +6,103 @@
   padding: 0;
 }
 
+.js-anim {
+  &.anim-top {
+    transform: translate(0, 80%);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.6s cubic-bezier(.54, 1.37, 1, .98);
+  }
+
+  &.anim-right {
+    transform: translate(-80%, 0);
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.8s cubic-bezier(.54, 1.37, 1, .98);
+  }
+
+  &.anim-left {
+    transform: translate(80%, 0);
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.8s cubic-bezier(.54, 1.37, 1, .98);
+  }
+
+  &.anim-yRot {
+    transform: rotateX(180deg);
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.8s cubic-bezier(.54, 1.37, 1, .98);
+  }
+  &.anim-yRotRev {
+    transform: rotateX(-180deg);
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.8s cubic-bezier(.54, 1.37, 1, .98);
+  }
+
+  &.anim-xRot {
+    transform: rotateY(180deg);
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.8s cubic-bezier(.54, 1.37, 1, .98);
+  }
+  &.anim-xRotRev {
+    transform: rotateY(-180deg);
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.8s cubic-bezier(.54, 1.37, 1, .98);
+  }
+
+  &.anim-blur {
+    filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.8s cubic-bezier(.54, 1.37, 1, .98), filter 0.5s ease;
+  }
+
+  &.anim-fadeT {
+    opacity: 0;
+    transform: translate(0, 40px);
+    transition: opacity 0.6s cubic-bezier(.54, 1.37, 1, .98), transform 0.8s ease;
+  }
+
+  &.anim-fadeB {
+    opacity: 0;
+    transform: translate(0, -60px);
+    transition: opacity 0.6s cubic-bezier(.54, 1.37, 1, .98), transform 0.8s ease;
+  }
+
+  &.anim-start {
+    transform: translate(0) rotate(0) !important;
+    filter: none !important;
+    opacity: 1 !important;
+
+  }
+}
+
+img.lazyload, video.lazyload {
+  opacity: 0;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+
+.is-loaded {
+  opacity: 0;
+  visibility: visible;
+  //transition: opacity 0.3s ease, visibility 0.3s ease;
+  animation: faddingImgAnim 0.5s ease;
+}
+
+
+@keyframes faddingImgAnim {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+main {
+  overflow: hidden;
+}
 body {
   font-size: $primary-font-size;
   font-family: 'Montserrat', sans-serif;
@@ -5671,18 +5768,21 @@ body.no-scroll {
 
   background: rgba(18, 18, 18, 0.7);
   backdrop-filter: blur(6px);
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+
   position: fixed;
   z-index: 999;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
+  display: flex;
+
+  transition: opacity 0.4s ease, visibility 0.4s ease;
   &.visible {
+
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -5834,3 +5934,5 @@ body.no-scroll {
     margin-bottom: 20px;
   }
 }
+
+
