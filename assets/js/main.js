@@ -257,3 +257,60 @@ const dealsSwiper = new Swiper('.deals-slider', {
 
 }).mount()
 
+
+//modal windows
+
+
+let btnModalReq = [...document.querySelectorAll('.btn-req')];
+
+function openModalReq() {
+    if (btnModalReq.length) {
+        btnModalReq.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('.modal-window--req').classList.add('visible');
+                document.body.classList.add('no-scroll');
+            })
+        })
+    }
+}
+openModalReq();
+let btnModalQue = [...document.querySelectorAll('.btn-que')];
+
+function openModalQue() {
+    if (btnModalQue.length) {
+        btnModalQue.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('.modal-window--ques').classList.add('visible');
+                document.body.classList.add('no-scroll');
+            })
+        })
+    }
+}
+openModalQue();
+
+let modalWindow = [...document.querySelectorAll('.modal-window')];
+
+function modalControl() {
+    if (modalWindow.length) {
+        modalWindow.forEach((mdl) => {
+            let back = mdl.querySelector('.modal-backplate');
+            let close = mdl.querySelector('.modal-close');
+            back.addEventListener('click', () => {
+                mdl.classList.remove('visible');
+                document.body.classList.remove('no-scroll');
+            });
+            close.addEventListener('click', () => {
+                mdl.classList.remove('visible');
+                document.body.classList.remove('no-scroll');
+
+            })
+        })
+    }
+}
+
+modalControl();
+
+//modal windows
+
