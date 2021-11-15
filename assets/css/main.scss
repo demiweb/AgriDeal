@@ -1516,11 +1516,12 @@ p {
 
     .head__background-text {
       position: absolute;
-      left: -60px;
-      bottom: 90px;
+      left: -17vw;
+      bottom: 0;
+      z-index: -1;
       text-transform: uppercase;
-      font-size: 200px;
-      line-height: 150px;
+      font-size: 11vw;
+      line-height: 9vw;
       font-weight: 700;
       color: $primary-color;
       text-shadow: 1px 0 1px #55586C,
@@ -3158,19 +3159,23 @@ p {
     .info__body {
       display: flex;
       justify-content: space-between;
+      align-items: stretch;
 
       .info__column {
         flex: 1;
-        height: 240px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         color: #6B7681;
+        .column__header {
+          margin-bottom: 90px;
+        }
+
 
         &:last-child {
           .column__body {
             display: flex;
-
             a {
               display: flex;
               align-items: center;
@@ -3194,6 +3199,7 @@ p {
         }
 
         .column__body {
+          margin-top: auto;
           a {
             text-decoration: none;
           }
@@ -3393,7 +3399,13 @@ p {
     }
   }
 }
-
+@media screen and (max-width: 1800px) {
+  .hero__container .head__body .head__background-text {
+    left: -120px;
+    font-size: 14vw;
+    line-height: 10vw;
+  }
+}
 @media screen and (max-width: 1500px) {
   .footer .footer__wrapper .footer__body .body__column {
     margin-right: 70px;
@@ -3426,6 +3438,18 @@ p {
 }
 
 @media (max-width: 1410px) {
+  .info .info__wrapper .info__body .info__column .column__header {
+    margin-bottom: 45px;
+  }
+
+  .info .info__wrapper {
+    margin: 80px 0;
+  }
+
+  .info .info__wrapper .info__body .info__column:not(:last-child) .column__body a{
+    font-size: 24px;
+    line-height: 28px;
+  }
   .articles .articles__wrapper .articles__body .body__block .block__article .article__share .share__links .link__item {
     flex: 0 0 auto;
     &:last-child {
@@ -3736,6 +3760,12 @@ p {
 }
 
 @media (max-width: 1200px) {
+  .hero__container .head__body .head__background-text {
+    left: -30px;
+    bottom: -30px;
+    font-size: 10vw;
+    line-height: 8vw;
+  }
   .blog .blog__wrapper .blog__hero .body__main .blog__block a .blog__body .blog__info .info__category {
     font-size: 10px;
     line-height: 14px;
@@ -4088,6 +4118,28 @@ p {
 
 
 @media (max-width: 992px) {
+  .info .info__wrapper .info__body .info__column .column__header .column__icon {
+    height: 25px;
+    margin-bottom: 12px;
+  }
+  .info .info__wrapper .info__body .info__column .column__header .column__icon svg {
+    height: 100%;
+    width: auto;
+  }
+  .info .info__wrapper .info__body .info__column .column__header {
+    margin-bottom: 30px;
+  }
+  .info .info__wrapper .info__body .info__column:not(:first-child) {
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+  .info .info__wrapper {
+    margin: 45px 0;
+  }
+  .info .info__wrapper .info__body .info__column:not(:last-child) .column__body a {
+    font-size: 18px;
+    line-height: 22px;
+  }
   .articles .articles__wrapper .articles__body .body__block .block__article .article__body h1 {
     font-size: 24px;
     line-height: 30px;
@@ -4945,6 +4997,38 @@ p {
 }
 
 @media screen and (max-width: 767px) {
+  .info .info__wrapper {
+    margin-top: 15px;
+  }
+  .info .info__wrapper .info__body {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .info .info__wrapper .info__body .info__column {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+  .info .info__wrapper .info__body .info__column:not(:first-child) {
+    padding-left: 0;
+    border-left: none;
+  }
+  .info .info__wrapper .info__body .info__column  .column__body {
+    width: 50%;
+  }
+  .info .info__wrapper .info__body .info__column .column__header {
+    width: 50%;
+    margin-bottom: 0;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
   .blog .blog__wrapper {
     margin: 30px 0 45px;
   }
@@ -5307,6 +5391,12 @@ p {
 }
 
 @media (max-width: 576px) {
+  .hero__container .head__body .head__background-text {
+    left: -20px;
+    bottom: 120px;
+    font-size: 12vw;
+    line-height: 8vw;
+  }
   .feedback .feedback__wrapper .feedback__body .feedback__form .form__btn {
     flex-direction: column;
     button {
@@ -5472,6 +5562,17 @@ p {
 }
 
 @media screen and (max-width: 525px) {
+  .info .info__wrapper .info__body .info__column {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .info .info__wrapper .info__body .info__column .column__body{
+    width: 100%;
+  }
+  .info .info__wrapper .info__body .info__column .column__header {
+    width: 100%;
+    margin-bottom: 20px;
+  }
   .blog .blog__wrapper .blog__hero .body__main .blog__block {
     row-gap: 25px;
     a {
